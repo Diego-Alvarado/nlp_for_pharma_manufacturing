@@ -31,4 +31,4 @@ To train NER, train_ner_chr_mask.py can be run. The following files and packages
 * gensim 4.1
 * seqeval 
 
-Examples of recognised entities in some paragraphs can be seen in the files examples.html
+Examples of recognised entities in some paragraphs can be seen in the file examples.html
