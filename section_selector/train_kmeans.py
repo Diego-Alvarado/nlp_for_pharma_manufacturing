@@ -46,15 +46,14 @@ if __name__ == "__main__":
             
             print("Training model...")        
             with open("performance.csv", "a", newline="") as f:
-                writer = csv.DictWriter(f, fieldnames=["distance", "k", "db", "ch", "slt", "time"])
+                writer = csv.DictWriter(f, fieldnames=["distance", "k", "db", "slt", "time"])
                 if k == 5:
                     writer.writeheader()
                 for _ in range(7):
-                    db, ch, sl = _model_performance(X, labels, 10000)    
+                    db, sl = _model_performance(X, labels, 10000)    
                     writer.writerow({"distance": dist,
                                     "k": k, 
                                     "db": db, 
-                                    "ch": ch, 
                                     "slt": sl,
                                     "time": end})
             end = perf_counter() - start
